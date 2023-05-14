@@ -1,0 +1,11 @@
+<img
+  [src]="img"
+  alt="Imagen de ejemplo"
+  *ngIf="img ; else elseImg"
+  (error) = "funErrorImg()"
+  (load) = "funImgLoad()"
+>
+<!--<h3>{{counter}}</h3>-->
+<ng-template #elseImg>
+  <img src="./assets/images/default.png" alt="Image de ejemplo">
+</ng-template>

@@ -1,0 +1,15 @@
+<app-img [img]="arrayProducto.image">
+  <!-- ... -->
+</app-img>
+
+<h2>{{ arrayProducto.price | currency:'EUR' }}</h2>
+<p>{{ arrayProducto.title | reverse }}</p>
+<p directHighlight>{{arrayProducto.description}}</p>
+
+<button (click)="funAgregarCarrito()"> Agregar Carrito</button>
+
+<!--
+<img width="200" [src]="arrayProducto.image" alt="">
+<h2>{{ arrayProducto.price }}</h2>
+<p>{{ arrayProducto.name }}</p>
+-->

@@ -1,0 +1,15 @@
+.products--grid {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+@media screen and (min-width: 30em) {
+  .products--grid {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 15px;
+    }
+}
+

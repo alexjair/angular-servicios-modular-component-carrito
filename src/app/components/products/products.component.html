@@ -1,0 +1,19 @@
+
+<p>Cantidad Productos: {{arrayCarrito.length }}</p>
+<p>Total: {{total_monto}}</p>
+<p>Fecha: {{vToday | date: 'short'}}</p> <!-- short | date: 'short' -->
+<p>Fecha: {{vToday | date: 'dd-MM-YYY'}}</p> <!-- short | date: 'short' -->
+<p>Fecha: {{vToday | timeAgo}}</p> <!-- short | date: 'short' -->
+<p>Autor: {{'alexander jair rojas paria' | uppercase}}</p>
+<br>
+<div class="products--grid">
+
+  <!-- Componente producto -->
+  <!-- Output :  envia la informacion del elemento agregado (outProductAgregar) a la fun :productAgregarRevice -->
+  <app-product
+      [arrayProducto]="producto" *ngFor="let producto of arrayProductosLista"
+      (outProductAgregar)="productAgregarRevice($event)"
+    >
+  </app-product>
+
+</div>
